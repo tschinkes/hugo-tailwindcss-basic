@@ -1,0 +1,16 @@
+{{- $opts := dict "transpiler" "libsass" "outputStyle" "expnaded" "targetPath" "css/style.css" }}
+{{- with resources.Get "scss/main.scss"  | toCSS $opts }}
+  {{- if eq hugo.Environment "development" }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}">
+  {{- else }}
+    {{- with . | minify | fingerprint }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+    {{- end }}
+  {{- end }}
+{{- end }}
+<link rel="stylesheet" href="{{ "/css/bootstrap.min.css" }}">
+{{- $opts := dict "transpiler" "libsass" "targetPath" "css/bootstrap-icons.css" }}
+{{- with resources.Get "scss/bootstrap-icons.scss"  | toCSS $opts | minify }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}">
+{{- end }}
+<link rel="stylesheet" href="{{ "/css/fa-icons.css" }}">

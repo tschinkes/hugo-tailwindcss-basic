@@ -1,0 +1,8 @@
+baseURL: /
+languageCode: de-DE
+timeZone: Europe/Berlin
+defaultContentLanguage: de
+title: Tobias
+theme: tw
+enableEmoji: true
+disableHugoGeneratorInject: true

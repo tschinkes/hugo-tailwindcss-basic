@@ -1,0 +1,9 @@
+{{ define "main" }}
+  <div class="container-sm pb-5">
+  {{ .Content }}
+  {{ range site.RegularPages }}
+  <h2 class="display-6 mt-5"><a href="{{ .RelPermalink }}" class="text-decoration-none">{{ .LinkTitle }}</a></h2>
+    {{ .Summary }}
+  {{ end }}
+  </div>
+{{ end }}
