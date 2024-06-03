@@ -1,8 +1,8 @@
-/* -------------------------------- Tailwind -------------------------------- */
- 
 @tailwind base;
-@import "base";
+@import "tbase";
+
 @tailwind components;
-@import "components";
+@import "tcomponents";
+
 @tailwind utilities;
-@import "utilities";
+@import "tutilities";

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "hugo -w server -D --disableFastRender --logLevel info"
+    "dev": "hugo -w server -D --disableFastRender --logLevel info --gc",
+    "build": "hugo --verbose --minify --cleanDestinationDir --gc"
   },
   "keywords": [
     "Hugo"

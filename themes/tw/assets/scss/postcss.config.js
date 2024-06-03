@@ -6,7 +6,7 @@ const config = {
     require('tailwindcss')(themeDir + '/tailwind.config.js'),
     require('autoprefixer')({
       path: [themeDir]
-    })
+    }),
   ]
 }
 
