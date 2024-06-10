@@ -2,7 +2,7 @@ baseURL: /
 languageCode: de-DE
 timeZone: Europe/Berlin
 defaultContentLanguage: de
-title: Tobias
+title: Tobias Kraft
 theme: tw
 enableEmoji: true
 disableHugoGeneratorInject: true
