@@ -1,0 +1,26 @@
+@layer base {
+   body{
+      @apply text-base;
+      @apply bg-nsky;
+      @apply text-white;
+   }
+   h1 {
+     @apply text-6xl;
+   }
+   h2 {
+     @apply text-4xl;
+   }
+   a {
+      @apply text-lg;
+      @apply font-normal;
+      @apply text-blue-400;
+      @apply transition-all;
+      @apply duration-300;
+      @apply hover:text-amber-500;
+      @apply focus-within:text-red-600;
+      @apply focus-within:outline-0;
+   }
+   img {
+      @apply my-6;
+   }
+ }

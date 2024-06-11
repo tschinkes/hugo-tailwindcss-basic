@@ -12,11 +12,9 @@ Renders a menu for the given menu ID.
 
 {{- with index site.Menus $menuID }}
   <nav>
-    <div class="flex flex-row-reverse">
-    <ul>
+    <ul class="menue flex flex-col sm:flex-row items-center gap-5 sm:gap-12 pl-4">
       {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
     </ul>
-    </div>
   </nav>
 {{- end }}
 
@@ -35,9 +33,8 @@ Renders a menu for the given menu ID.
         {{- $name = . }}
       {{- end }}
     {{- end }}
-    <div class="flex inline-flex p-4">
     <li>
-      <a
+      <a class="text-lg font-normal text-blue-400 transition-all duration-300 hover:text-amber-500 focus-within:text-red-600 focus-within:outline-0"
         {{- range $k, $v := $attrs }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
@@ -50,6 +47,5 @@ Renders a menu for the given menu ID.
         </ul>
       {{- end }}
     </li>
-    </div>
   {{- end }}
 {{- end }}
