@@ -1,9 +1,9 @@
-{{- with resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS (dict "targetPath" "css/style.css") | postCSS (dict "config" "./assets/scss/postcss.config.js") }}
-  {{- if eq hugo.Environment "development" }}
+{{- with resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS (dict "targetPath" "css/style.css") | postCSS (dict "config" "./assets/scss/postcss.config.js") -}}
+  {{- if eq hugo.Environment "development" -}}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
+  {{- else -}}
+    {{- with . | minify | fingerprint -}}
       <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
-  {{- end }}
-{{- end }}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

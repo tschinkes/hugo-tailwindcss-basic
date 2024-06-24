@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html lang="{{ or site.Language.LanguageCode site.Language.Lang }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
 <head>
-  {{ partial "head.html" . }}
+  {{- partial "head.html" . -}}
 </head>
 <body>
-  <div class="mx-auto max-w-7xl ">
-    <div class="px-4 sm:px-6 lg:px-8">
-      <header>
-        <div class="p-4 my-10">
-        {{ partial "header.html" . }}
-        </div>
+  <div class="container mx-auto max-w-7xl ">
+       <header>
+        
+        {{- partial "header.html" . -}}
+        
       </header>
       <main>
-        <div class="p-6">
+        
         {{ block "main" . }}{{ end }}
-        </div>
+        
       </main>
       <footer>
-        <div class="border-t-2 border-amber-500 p-4">
+        
         {{ partial "footer.html" . }}
-        </div>
+        
       </footer>
-    </div>
   </div>
 </body>
 </html>
