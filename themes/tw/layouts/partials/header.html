@@ -1,9 +1,9 @@
 
-<div class="mx-auto max-w-7xl px-3">
-   <div class="flex flex-col min-[830px]:flex-row items-center justify-between gap-6">
+<div class="flex flex-grow">
+   <div class="logo">
       {{ partial "logo.html" }}
-      <div class="menue mt-10 pr-10">
-         {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
-      </div>
+   </div>
+   <div class="menue">
+      {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
    </div>
 </div>

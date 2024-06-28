@@ -1,14 +1,20 @@
 {{ define "main" }}
-<div class="text-6xl mb-20">
-  <h2>{{ .Title }}</h2>
-</div>
-  {{ .Content }}
-  {{ range .Pages }}
-  <div class="text-4xl mb-4 mt-6">
-    <h3>
-      <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-    </h3>
-  </div>
-    {{ .Summary }}
-  {{ end }}
+      <div>
+        <div class="text-6xl mb-20">
+          <h2>{{ .Title }}</h2>
+        </div>
+          {{ .Content }}
+          {{ range .Pages }}
+        <section>
+            <div class="text-4xl mb-4 mt-6">
+              <h3>
+                <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+              </h3>
+            </div>
+            <div>
+            {{ .Summary }}
+            </div>
+        </section>
+        {{ end }}
+      </div>
 {{ end }}

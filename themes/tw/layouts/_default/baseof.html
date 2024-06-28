@@ -4,7 +4,7 @@
   {{- partial "head.html" . -}}
 </head>
 <body>
-  <div class="container mx-auto max-w-7xl ">
+  <div class="">
        <header>
         
         {{- partial "header.html" . -}}
@@ -12,12 +12,12 @@
       </header>
       <main>
         
-        {{ block "main" . }}{{ end }}
+        {{- block "main" . -}}{{- end -}}
         
       </main>
-      <footer>
+      <footer class="bg-amber-500 text-blue-950 py-4 px-3 mt-16">
         
-        {{ partial "footer.html" . }}
+        {{- partial "footer.html" . -}}
         
       </footer>
   </div>
