@@ -1,4 +1,4 @@
-{{- with resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "mainstyle.css" . | toCSS (dict "targetPath" "css/style.css") | postCSS (dict "config" "./assets/scss/postcss.config.js") -}}
+{{- with resources.Get "scss/main.scss" | resources.ExecuteAsTemplate (printf "ms.%s.css" now.UnixMilli) . | toCSS (dict "targetPath" "css/style.css") | postCSS (dict "config" "./assets/scss/postcss.config.js") -}}
   {{- if eq hugo.Environment "development" -}}
     <link rel="stylesheet" href="{{ .RelPermalink }}">
   {{- else -}}
