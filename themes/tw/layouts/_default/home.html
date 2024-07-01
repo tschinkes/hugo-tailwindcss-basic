@@ -1,5 +1,6 @@
 
 {{ define "main" }}
+<div class="container mx-auto flex flex-wrap items-center justify-between">
   {{ .Content }}
   {{ range site.RegularPages }}
   <div class="text-4xl mb-4 mt-10">
@@ -9,4 +10,5 @@
     {{ .Summary }}
   </div>
   {{ end }}
+</div>
 {{ end }}
