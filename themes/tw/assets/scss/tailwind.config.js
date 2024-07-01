@@ -5,7 +5,8 @@ const colors = require('tailwindcss/colors')
 module.exports = {
   content: [
     "./themes/**/layouts/**/*.{html,js,md}",
-    "./layouts/**/*.{html,js,md}"
+    "./layouts/**/*.{html,js,md}",
+    "./hugo_stats.json",
   ],
   theme: {
     /** Komplette Veränderungen hier direkt z.B. colors: */
