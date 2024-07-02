@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "hugo server -w -D --disableFastRender --logLevel info",
+    "dev": "hugo server -w -D --disableFastRender --gc --logLevel info",
     "dev:clean": "node clean.js && npm run dev",
     "build": "hugo --verbose --minify --cleanDestinationDir --gc"
   },
@@ -14,14 +14,14 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
     "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.38",
+    "postcss": "^8.4.39",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.1.0",
     "tailwindcss": "^3.4.4"
   },
   "dependencies": {
-    "@tailwindcss/typography": "^0.5.13",
     "npm-check": "^6.0.1"
   }
 }
