@@ -34,7 +34,7 @@ Renders a menu for the given menu ID.
       {{- end }}
     {{- end }}
     <li>
-      <a class="text-lg font-normal text-blue-400 transition-all duration-300 hover:text-amber-500 focus-within:text-red-600 focus-within:outline-0"
+      <a class="text-lg font-normal text-blue-400 transition-all duration-300 hover:text-amber-500 focus-within:text-red-600 focus-within:outline-0 border-b-2"
         {{- range $k, $v := $attrs }}
           {{- with $v }}
             {{- printf " %s=%q" $k $v | safeHTMLAttr }}
